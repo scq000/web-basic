@@ -17,6 +17,15 @@ FormHelper.prototype.setUserInputs = function(topics){
     }
 };
 
+FormHelper.prototype.getTotalScore = function(topics){
+    var totalScore = 0;
+
+    topics.forEach(function(topic) {
+        totalScore += topic.mark();
+    });
+
+    return totalScore;
+};
 
 module.exports = FormHelper;
 
