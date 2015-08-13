@@ -79,8 +79,8 @@
       "value": ""
     },
     {
-      "type": "single_choice",
-      "name": "single_choice1",
+      "type": "multiple_choice",
+      "name": "multiple_choice1",
       "question": "类图由以下哪三部分组成：",
       "options": {
         "A": "名称(Name)",
