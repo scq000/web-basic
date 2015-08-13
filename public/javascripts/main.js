@@ -3,7 +3,8 @@ $(document).ready(function() {
         if(judgeUserInput()){
             $("form").submit();
         }else{
-            alert('user input is not complete!');
+            $("#alert_info").modal("show");
+            $("html,body").animate({scrollTop: $("#title").offset().top}, 500);
         }
     });
 });
