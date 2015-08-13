@@ -6,7 +6,7 @@ var HomeViewModel = require('../view-models/home-view-model');
 function HomeController() {
 }
 
-HomeController.prototype.index = function(req,res) {
+HomeController.prototype.index = function (req, res) {
 
     var data = require('../seeds/topics.json');
     var topicHelper = new TopicHelper();
@@ -14,7 +14,7 @@ HomeController.prototype.index = function(req,res) {
 
     console.log(req.body);
 
-    var homeViewModel = new HomeViewModel(topics,req.body);
+    var homeViewModel = new HomeViewModel(topics, req.body);
 
     res.render('index', homeViewModel);
 };

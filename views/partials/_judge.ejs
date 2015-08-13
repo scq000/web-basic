@@ -4,17 +4,19 @@
     </div>
 
     <div class="panel-body">
-        <ul  class="list-group">
+        <ul class="list-group">
 
-            <% topics.forEach(function(topic,i) { %>
-            <li  class="list-group-item">
-                <label><%= i+1 %>.<%= topic.question %></label>
+            <% topics.forEach(function(topic, i) { %>
+            <li class="list-group-item">
+
+                <label><%= i + 1 %>.<%= topic.question %></label>
 
                 <div class="form-group">
                     <% for(var choice in topic.options ) { %>
                     <% var isChecked = choice === topic.value ? 'Checked' : '' %>
-                    <input name="judge<%= i %>" type="radio" value="<%= choice%>" <%= isChecked %>/><%= topic.options[choice] %>
-                    <% }%>
+                    <input name="judge<%= i %>" type="radio"
+                           value="<%= choice %>" <%= isChecked %>/><%= topic.options[choice] %>
+                    <% } %>
                 </div>
 
             </li>

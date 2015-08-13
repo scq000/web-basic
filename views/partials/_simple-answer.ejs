@@ -1,16 +1,17 @@
 <section class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title" >五、简 答 题</h3>
+        <h3 class="panel-title">五、简 答 题</h3>
     </div>
 
     <div class="panel-body">
 
         <ul class="list-group">
 
-            <% topics.forEach(function(topic,i) { %>
+            <% topics.forEach(function(topic, i) { %>
             <li class="list-group-item">
-                <label><%= i+1 %>.<%= topic.question %></label><br/>
-                <textarea class="form-control" name="simple_answer<%= i %>" cols="50" rows="10"><%= topic.value %></textarea>
+                <label><%= i + 1 %>.<%= topic.question %></label><br/>
+                <textarea class="form-control" name="simple_answer<%= i %>" cols="50"
+                          rows="10"><%= topic.value %></textarea>
             </li>
             <% }); %>
 

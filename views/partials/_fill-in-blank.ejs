@@ -1,16 +1,17 @@
 <section class="panel panel-primary">
+
     <div class="panel-heading">
         <h3 class="panel-title">一、填空题</h3>
     </div>
 
     <ol class="list-group">
-        <% topics.forEach(function(topic,i) { %>
+        <% topics.forEach(function(topic, i) { %>
         <li class="list-group-item form-inline">
-            <label><%= i+1 %>.<%= topic.question %></label>
+            <label><%= i + 1 %>.<%= topic.question %></label>
 
             <div class="form-group">
                 <% for(var k = 0; k < topic.options.length; k++) { %>
-                <input class="form-control" name="fill_in_blank<%= i %>" type="text" value="<%=  topic.value[k] %>"/>
+                <input class="form-control" name="fill_in_blank<%= i %>" type="text" value="<%= topic.value[k] %>"/>
                 <% } %>
             </div>
 
@@ -18,4 +19,5 @@
         <% }); %>
 
     </ol>
+
 </section>

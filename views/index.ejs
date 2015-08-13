@@ -2,52 +2,51 @@
 <html>
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>统一建模语言理论测试</title>
+    <title>统一建模语言理论测试</title>
 
-  <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
 
 <div class="container container-fluid">
+    <div class=" jumbotron">
 
-  <div class=" jumbotron">
+        <h1 id="title" class="text-center">统一建模语言理论测试</h1>
 
-    <h1 id="title" class="text-center">统一建模语言理论测试</h1>
+        <form action="/" method="post" class="userInput" autocomplete="off">
 
-    <form action="/" method="post" class="userInput" autocomplete="off">
+            <%- include('partials/_header.ejs', {totalScore: getTotalScore(),studentInfo: getStudentInfo() }) %>
 
-      <%- include('partials/_header.ejs', {totalScore: getTotalScore(),studentInfo: getStudentInfo() }) %>
+            <%- include('partials/_fill-in-blank.ejs', {topics: getFillInBlankTopic() }) %>
 
-      <%- include('partials/_fill-in-blank.ejs', {topics: getFillInBlankTopic() }) %>
+            <%- include('partials/_single-choice.ejs', {topics: getSingleChoiceTopic() }) %>
 
-      <%- include('partials/_single-choice.ejs', {topics: getSingleChoiceTopic() }) %>
+            <%- include('partials/_multiple-choice.ejs', {topics: getMultipleChoiceTopic() }) %>
 
-      <%- include('partials/_multiple-choice.ejs', {topics: getMultipleChoiceTopic() }) %>
+            <%- include('partials/_judge.ejs', {topics: getJudgeTopic() }) %>
 
-      <%- include('partials/_judge.ejs', {topics: getJudgeTopic() }) %>
+            <%- include('partials/_simple-answer.ejs', {topics: getSimpleAnswerTopic() }) %>
 
-      <%- include('partials/_simple-answer.ejs', {topics: getSimpleAnswerTopic() }) %>
+            <div class="text-center">
+                <input id="submit_btn" class="btn btn-primary dropdown-toggle" value="提交"/>
+            </div>
 
-      <div class="text-center">
-        <input id="submit_btn" class="btn btn-primary dropdown-toggle" value="提交" />
-      </div>
+        </form>
 
-    </form>
+        <%- include('partials/_alert-modal.ejs') %>
 
-    <%- include('partials/_alert-modal.ejs') %>
-
-  </div>
+    </div>
 </div>
 
-  <script src="components/jquery/jquery.min.js"></script>
-  <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/bootstrap/dist/js/bootstrap.js"></script>
 
-  <script src="javascripts/judge-user-input.js"></script>
-  <script src="javascripts/main.js"></script>
-  </body>
+<script src="javascripts/judge-user-input.js"></script>
+<script src="javascripts/main.js"></script>
+</body>
 </html>

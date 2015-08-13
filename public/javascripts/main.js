@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    $("#submit_btn").on('click', function() {
-        if(judgeUserInput()){
+$(document).ready(function () {
+    $("#submit_btn").on('click', function () {
+        if (judgeUserInput()) {
             $("form").submit();
-        }else{
+        } else {
             $("#alert_info").modal("show");
             $("html,body").animate({scrollTop: $("#title").offset().top}, 500);
         }

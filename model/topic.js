@@ -1,6 +1,6 @@
 'use strict';
 
-function Topic(type,name,question,options,score,answer){
+function Topic(type, name, question, options, score, answer) {
     this.type = type;
     this.name = name;
     this.question = question;
@@ -10,10 +10,11 @@ function Topic(type,name,question,options,score,answer){
     this.value = '';
 }
 
-Topic.prototype.mark = function(){};
+Topic.prototype.mark = function () {
+};
 
-Topic.prototype.setValue = function(value){
-  this.value = value;
+Topic.prototype.setValue = function (value) {
+    this.value = value;
 };
 
 module.exports = Topic;

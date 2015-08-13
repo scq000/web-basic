@@ -2,35 +2,35 @@
 
 var _ = require('lodash');
 
-function FormHelper(formData){
+function FormHelper(formData) {
     this.formData = formData;
 };
 
-FormHelper.prototype.setUserInputs = function(topics){
-    for(var name in this.formData) {
-        if(name === 'grade' || name === 'studentId' || name === 'studentName') {
+FormHelper.prototype.setUserInputs = function (topics) {
+    for (var name in this.formData) {
+        if (name === 'grade' || name === 'studentId' || name === 'studentName') {
             continue;
         }
         console.log(this.formData);
-        _.find(topics,{'name': name}).setValue(this.formData[name]);
+        _.find(topics, {'name': name}).setValue(this.formData[name]);
     }
 };
 
-FormHelper.prototype.isDateEmpty = function(){
-    for(var name in this.formData) {
-      return false;
+FormHelper.prototype.isDateEmpty = function () {
+    for (var name in this.formData) {
+        return false;
     }
 
     return true;
 };
 
-FormHelper.prototype.getTotalScore = function(topics){
-    if(this.isDateEmpty()) {
+FormHelper.prototype.getTotalScore = function (topics) {
+    if (this.isDateEmpty()) {
         return '';
     }
     var totalScore = 0;
 
-    topics.forEach(function(topic) {
+    topics.forEach(function (topic) {
         totalScore += topic.mark();
     });
 

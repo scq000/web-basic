@@ -4,14 +4,14 @@
     </div>
 
     <div class="panel-body">
-        <% topics.forEach(function(topic,i){ %>
+        <% topics.forEach(function(topic, i){ %>
         <ul class="list-group">
-            <label><%= i+1 %>.<%= topic.question %></label>
+            <label><%= i + 1 %>.<%= topic.question %></label>
 
             <% for(var choice in topic.options) { %>
             <li class="list-group-item">
                 <% var isChecked = (topic.value.indexOf(choice) !== -1) ? 'Checked' : '' %>
-                <input name="multiple_choice<%= i %>" type="checkbox" value="<%= choice%>" <%= isChecked %>/>
+                <input name="multiple_choice<%= i %>" type="checkbox" value="<%= choice %>" <%= isChecked %>/>
                 <label>（<%= choice %>）<%= topic.options[choice] %></label>
 
             </li>

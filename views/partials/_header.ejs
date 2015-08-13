@@ -1,5 +1,6 @@
 <header>
     <table class="table table-hover">
+
         <tr>
             <td>
                 <label>考试科目：</label>
@@ -14,19 +15,24 @@
                 <label class="label label-danger" id="totalScore"><%= totalScore %></label>
             </td>
         </tr>
+
         <tr>
             <td class="form-group form-inline">
                 <label for="grade">班 级：</label>
-                <input class="form-control student_info" name="grade" type="text" id="grade" value="<%= studentInfo.grade %>"/>
+                <input class="form-control student_info" name="grade" type="text" id="grade"
+                       value="<%= studentInfo.grade %>"/>
             </td>
             <td class="form-group form-inline">
                 <label for="studentId">学号：</label>
-                <input class="form-control student_info" name="studentId" type="text" id="studentId" value="<%= studentInfo.studentId %>"/>
+                <input class="form-control student_info" name="studentId" type="text" id="studentId"
+                       value="<%= studentInfo.studentId %>"/>
             </td>
             <td class="form-group form-inline">
                 <label for="studentName">姓名：</label>
-                <input class="form-control student_info" name="studentName" type="text" id="studentName" value="<%= studentInfo.studentName %>"/>
+                <input class="form-control student_info" name="studentName" type="text" id="studentName"
+                       value="<%= studentInfo.studentName %>"/>
             </td>
         </tr>
+
     </table>
 </header>
