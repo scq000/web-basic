@@ -9,6 +9,8 @@ function JudgeTopic(name,question,options,score,answer){
 JudgeTopic.prototype = Object.create(Topic.prototype);
 JudgeTopic.prototype.constructor = JudgeTopic;
 
-JudgeTopic.prototype.mark = function(){};
+JudgeTopic.prototype.mark = function(){
+
+};
 
 module.exports = JudgeTopic;
