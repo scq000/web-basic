@@ -2,7 +2,7 @@
 
 var Topic = require('./topic');
 
-function SingleChoiceTopic(type,name,question,options,score,answer){
+function SingleChoiceTopic(name,question,options,score,answer){
     Topic.call(this,"fill_in_blank",name,question,options,score,answer);
 }
 
