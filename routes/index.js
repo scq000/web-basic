@@ -7,4 +7,6 @@ var HomeController =require('../controller/home-controller');
 var homeController = new HomeController();
 router.get('/', homeController.createIndex);
 
+router.post('/',homeController.controlUserInput);
+
 module.exports = router;
