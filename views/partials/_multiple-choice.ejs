@@ -1,20 +1,23 @@
-<section>
-    <h3>三、多选题</h3>
+<section class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">三、多选题</h3>
+    </div>
 
-    <% topics.forEach(function(topic,i){ %>
-    <ul>
-        <label><%= i+1 %>.<%= topic.question %></label>
+    <div class="panel-body">
+        <% topics.forEach(function(topic,i){ %>
+        <ul class="list-group">
+            <label><%= i+1 %>.<%= topic.question %></label>
 
-        <% for(var choice in topic.options) { %>
-        <li>
-            <% var isChecked = (topic.value.indexOf(choice) !== -1) ? 'Checked' : '' %>
-            <input name="multiple_choice<%= i %>" type="checkbox" value="<%= choice%>" <%= isChecked %>/>
-            <label>（<%= choice %>）<%= topic.options[choice] %></label>
+            <% for(var choice in topic.options) { %>
+            <li class="list-group-item">
+                <% var isChecked = (topic.value.indexOf(choice) !== -1) ? 'Checked' : '' %>
+                <input name="multiple_choice<%= i %>" type="checkbox" value="<%= choice%>" <%= isChecked %>/>
+                <label>（<%= choice %>）<%= topic.options[choice] %></label>
 
-        </li>
-        <% } %>
+            </li>
+            <% } %>
 
-    </ul>
-    <% }); %>
-
+        </ul>
+        <% }); %>
+    </div>
 </section>

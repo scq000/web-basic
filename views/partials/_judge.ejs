@@ -1,16 +1,26 @@
-<section>
-    <h3>四、判断题</h3>
-    <ul>
+<section class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">四、判断题</h3>
+    </div>
 
-        <% topics.forEach(function(topic,i) { %>
-        <li>
-            <label><%= i+1 %>.<%= topic.question %></label>
-            <% for(var choice in topic.options ) { %>
-            <% var isChecked = choice === topic.value ? 'Checked' : '' %>
-                <input name="judge<%= i %>" type="radio" value="<%= choice%>" <%= isChecked %>/><%= topic.options[choice] %>
-            <% }%>
-        </li>
-        <% }); %>
+    <div class="panel-body">
+        <ul  class="list-group">
 
-    </ul>
+            <% topics.forEach(function(topic,i) { %>
+            <li  class="list-group-item">
+                <label><%= i+1 %>.<%= topic.question %></label>
+
+                <div class="form-group">
+                    <% for(var choice in topic.options ) { %>
+                    <% var isChecked = choice === topic.value ? 'Checked' : '' %>
+                    <input name="judge<%= i %>" type="radio" value="<%= choice%>" <%= isChecked %>/><%= topic.options[choice] %>
+                    <% }%>
+                </div>
+
+            </li>
+            <% }); %>
+
+        </ul>
+    </div>
+
 </section>

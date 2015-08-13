@@ -1,12 +1,14 @@
-<section>
-    <h3>二、选择题</h3>
+<section class="panel panel-primary">
+    <div  class="panel-heading">
+        <h3 class="panel-title">二、选择题</h3>
+    </div>
 
     <% topics.forEach(function(topic,i){ %>
-    <ul>
+    <ul class="panel-body">
         <label><%= i+1 %>.<%= topic.question %></label>
 
         <% for(var choice in topic.options) { %>
-        <li>
+        <li class="list-group-item">
             <% var isChecked = choice === topic.value ? 'Checked' : '' %>
             <input name="single_choice<%= i %>" type="radio" value="<%= choice%>" <%= isChecked %>/>
             <label>（<%= choice %>）<%= topic.options[choice] %></label>

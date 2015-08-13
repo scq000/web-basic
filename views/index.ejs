@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>统一建模语言理论测试</title>
+
+  <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 
-<h1>统一建模语言理论测试</h1>
+<div class="container container-fluid">
 
-  <form action="/" method="post" class="userInput" autocomplete="off">
+  <div class=" jumbotron">
 
-    <%- include('partials/_header.ejs', {totalScore: getTotalScore(),studentInfo: getStudentInfo() }) %>
+    <h1 class="text-center">统一建模语言理论测试</h1>
 
-    <%- include('partials/_fill-in-blank.ejs', {topics: getFillInBlankTopic() }) %>
+    <form action="/" method="post" class="userInput" autocomplete="off">
 
-    <%- include('partials/_single-choice.ejs', {topics: getSingleChoiceTopic() }) %>
+      <%- include('partials/_header.ejs', {totalScore: getTotalScore(),studentInfo: getStudentInfo() }) %>
 
-    <%- include('partials/_multiple-choice.ejs', {topics: getMultipleChoiceTopic() }) %>
+      <%- include('partials/_fill-in-blank.ejs', {topics: getFillInBlankTopic() }) %>
 
-    <%- include('partials/_judge.ejs', {topics: getJudgeTopic() }) %>
+      <%- include('partials/_single-choice.ejs', {topics: getSingleChoiceTopic() }) %>
 
-    <%- include('partials/_simple-answer.ejs', {topics: getSimpleAnswerTopic() }) %>
+      <%- include('partials/_multiple-choice.ejs', {topics: getMultipleChoiceTopic() }) %>
 
+      <%- include('partials/_judge.ejs', {topics: getJudgeTopic() }) %>
 
-    <button type="submit" />提交
+      <%- include('partials/_simple-answer.ejs', {topics: getSimpleAnswerTopic() }) %>
 
-  </form>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary dropdown-toggle"  />提交
+    </div>
 
+    </form>
+
+  </div>
+</div>
+
+  <script src="components/jquery/jquery.min.js"></script>
+  <script src="components/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>
