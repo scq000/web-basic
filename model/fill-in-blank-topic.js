@@ -11,8 +11,11 @@ FillInBlankTopic.prototype = Object.create(Topic.prototype);
 FillInBlankTopic.prototype.constructor = FillInBlankTopic;
 
 FillInBlankTopic.prototype.mark = function(){
-    var userAnswer = this.value instanceof Array ? this.value : new Array(this.value);
-    return _.intersection(this.answer,userAnswer).length * this.score;
+    return _.intersection(this.answer,this.value).length * this.score;
+};
+
+FillInBlankTopic.prototype.setValue = function(value) {
+  this.value = value instanceof Array ? value : new Array(value);
 };
 
 module.exports = FillInBlankTopic;
