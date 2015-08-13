@@ -1,0 +1,138 @@
+{
+  "fill_in_blank": [
+    {
+      "type": "fill_in_blank",
+      "name": "fill_in_blank0",
+      "question": "UML 的中文全称是：",
+      "options": [
+        ""
+      ],
+      "score": 5,
+      "answer": [
+        "统一建模语言"
+      ],
+      "value": ""
+    },
+    {
+      "type": "fill_in_blank",
+      "name": "fill_in_blank1",
+      "question": "对象最突出的特征是：",
+      "options": [
+        "",
+        "",
+        ""
+      ],
+      "score": 15,
+      "answer": [
+        "统一建模语言"
+      ],
+      "value": ""
+    }
+  ],
+  "single_choice": [
+    {
+      "type": "single_choice",
+      "name": "single_choice0",
+      "question": "UML与软件工程的关系是：",
+      "options": {
+        "A": "UML 就是软件工程",
+        "B": "UML 参与到软件工程中软件开发过程的几个阶段",
+        "C": "UML 与软件工程无关",
+        "D": "UML 是软件工程的一部分"
+      },
+      "score": 10,
+      "answer": "A",
+      "value": ""
+    },
+    {
+      "type": "single_choice",
+      "name": "single_choice1",
+      "question": "Java语言支持：",
+      "option": {
+        "A": "单继承",
+        "B": "多继承",
+        "C": "单继承和多继承都支持",
+        "D": "单继承和多继承都不支持"
+      },
+      "score": 10,
+      "answer": "C",
+      "value": ""
+    }
+  ],
+  "multiple_choice": [
+    {
+      "type": "multiple_choice",
+      "name": "multiple_choice0",
+      "question": "用例的粒度分为以下哪三种。",
+      "options": {
+        "A": "概述级",
+        "B": "需求级",
+        "C": "用户目标级",
+        "D": "子功能级"
+      },
+      "score": 10,
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "value": ""
+    },
+    {
+      "type": "single_choice",
+      "name": "single_choice1",
+      "question": "类图由以下哪三部分组成：",
+      "option": {
+        "A": "名称(Name)",
+        "B": "属性(Attribute)",
+        "C": "操作(Operation)",
+        "D": "方法（Function）"
+      },
+      "score": 10,
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "value": ""
+    }
+  ],
+  "judge": [
+    {
+      "type": "judge",
+      "name": "judge0",
+      "question": "用例图只是用于和客户交流和沟通的，用于确定需求。",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "score": 10,
+      "answer": "no",
+      "value": ""
+    },
+    {
+      "type": "judge",
+      "name": "judge1",
+      "question": "在状态图中,终止状态在一个状态图中允许有任意多个。",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "score": 10,
+      "answer": "yes",
+      "value": ""
+    }
+  ],
+  "simple_answer": [
+    {
+      "type": "simple_answer",
+      "name": "simple_answer0",
+      "question": "简述什么是模型以及模型的表现形式?",
+      "options": "",
+      "score": 20,
+      "answer": "no",
+      "value": ""
+    }
+  ]
+}
+
