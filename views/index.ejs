@@ -11,22 +11,20 @@
 
     <%- include('partials/_header.ejs') %>
 
-    <%- include('partials/_fill-in-blank.ejs') %>
+    <%- include('partials/_fill-in-blank.ejs', {topics: topics.fill_in_blank}) %>
 
-    <%- include('partials/_single-choice.ejs') %>
+    <%- include('partials/_single-choice.ejs', {topics: topics.single_choice}) %>
 
-    <%- include('partials/_multiple-choice.ejs') %>
+    <%- include('partials/_multiple-choice.ejs', {topics: topics.multiple_choice}) %>
 
-    <%- include('partials/_judge.ejs') %>
+    <%- include('partials/_judge.ejs', {topics: topics.judge}) %>
 
-    <%- include('partials/_simple-answer.ejs') %>
+    <%- include('partials/_simple-answer.ejs', {topics: topics.simple_answer}) %>
 
 
     <button type="submit" />提交
 
   </form>
-
-
 
   </body>
 </html>

@@ -4,7 +4,10 @@ function HomeController() {
 }
 
 HomeController.prototype.createIndex = function(req,res) {
-    res.render('index');
+
+    var topics = require('../seeds/topics.json');
+
+    res.render('index',{topics: topics});
 };
 
 HomeController.prototype.controlUserInput = function(req,res) {

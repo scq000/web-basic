@@ -1,15 +1,16 @@
 <section>
     <h3>一、填空题</h3>
     <ol>
+        <% topics.forEach(function(topic,i) { %>
         <li>
-            <label>UML 的中文全称是：</label>
-            <input name="fill_in_blank0" type="text"/>
+            <label><%= topic.question %></label>
+
+            <% for(var k = 0; k < topic.options.length; k++) { %>
+            <input name="fill_in_blank<%= i %>" type="text"/>
+            <% } %>
+
         </li>
-        <li>
-            <label>对象最突出的特征是：</label>
-            <input name="fill_in_blank1" type="text"/>
-            <input name="fill_in_blank1" type="text"/>
-            <input name="fill_in_blank1" type="text"/>
-        </li>
+        <% }); %>
+
     </ol>
 </section>
