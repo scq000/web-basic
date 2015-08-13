@@ -3,7 +3,7 @@
 var Topic = require('./topic');
 
 function SimpleAnswerTopic(name,question,options,score,answer){
-    Topic.call(this,"fill_in_blank",name,question,options,score,answer);
+    Topic.call(this,"simple_answer",name,question,options,score,answer);
 }
 
 SimpleAnswerTopic.prototype = Object.create(Topic.prototype);

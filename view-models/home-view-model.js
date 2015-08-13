@@ -1,7 +1,7 @@
 'use strict';
 
 function HomeViewModel(topics) {
-    this.topics;
+    this.topics = topics;
 }
 
 HomeViewModel.prototype.getFillInBlankTopic = function () {

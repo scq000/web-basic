@@ -1,13 +1,20 @@
 'use strict';
 
+var TopicHelper = require('../helper/topic-helper');
+var HomeViewModel = require('../view-models/home-view-model');
+
 function HomeController() {
 }
 
 HomeController.prototype.createIndex = function(req,res) {
 
-    var topics = require('../seeds/topics.json');
+    var data = require('../seeds/topics.json');
+    var topicHelper = new TopicHelper();
+    var topics = topicHelper.getTopics(data);
 
-    res.render('index',{topics: topics});
+    var homeViewModel = new HomeViewModel(topics);
+    
+    res.render('index', homeViewModel);
 };
 
 HomeController.prototype.controlUserInput = function(req,res) {
