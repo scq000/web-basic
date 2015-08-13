@@ -9,7 +9,7 @@
 
   <form action="/" method="post" class="userInput" autocomplete="off">
 
-    <%- include('partials/_header.ejs') %>
+    <%- include('partials/_header.ejs', {totalScore: getTotalScore() }) %>
 
     <%- include('partials/_fill-in-blank.ejs', {topics: getFillInBlankTopic() }) %>
 

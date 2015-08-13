@@ -9,6 +9,8 @@ function SingleChoiceTopic(name,question,options,score,answer){
 SingleChoiceTopic.prototype = Object.create(Topic.prototype);
 SingleChoiceTopic.prototype.constructor = SingleChoiceTopic;
 
-SingleChoiceTopic.prototype.mark = function(){};
+SingleChoiceTopic.prototype.mark = function(){
+    return this.value === this.answer ? this.score : 0;
+};
 
 module.exports = SingleChoiceTopic;

@@ -2,7 +2,6 @@
 
 var TopicHelper = require('../helper/topic-helper');
 var HomeViewModel = require('../view-models/home-view-model');
-var FormHelper = require('../helper/form-helper');
 
 function HomeController() {
 }
@@ -24,11 +23,9 @@ HomeController.prototype.controlUserInput = function(req,res) {
     var topicHelper = new TopicHelper();
     var topics = topicHelper.getTopics(data);
 
-    var homeViewModel = new HomeViewModel(topics);
-    var formHelper = new FormHelper(req.body);
-    formHelper.setUserInputs(topics);
+    var homeViewModel = new HomeViewModel(topics,req.body);
 
-    res.send(topics);
+    res.render('index',homeViewModel);
 };
 
 module.exports = HomeController;

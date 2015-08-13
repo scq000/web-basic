@@ -7,7 +7,6 @@ function FormHelper(formData){
 };
 
 FormHelper.prototype.setUserInputs = function(topics){
-    console.log(topics);
     for(var name in this.formData) {
         if(name === 'grade' || name === 'studentId' || name === 'studentName') {
             continue;

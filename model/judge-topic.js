@@ -10,7 +10,7 @@ JudgeTopic.prototype = Object.create(Topic.prototype);
 JudgeTopic.prototype.constructor = JudgeTopic;
 
 JudgeTopic.prototype.mark = function(){
-
+    return (this.value === this.answer) ? this.score : 0;
 };
 
 module.exports = JudgeTopic;
