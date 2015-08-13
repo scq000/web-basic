@@ -38,6 +38,11 @@ HomeViewModel.prototype.getSimpleAnswerTopic = function () {
 };
 
 
+HomeViewModel.prototype.getStudentInfo = function() {
+    var formHelper = new FormHelper(this.formData);
+    return formHelper.getStudentInfo();
+};
+
 HomeViewModel.prototype.getTotalScore = function() {
     if(!this.formData){
         return '';

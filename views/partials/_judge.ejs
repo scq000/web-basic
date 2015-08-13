@@ -6,7 +6,8 @@
         <li>
             <label><%= i+1 %>.<%= topic.question %></label>
             <% for(var choice in topic.options ) { %>
-                <input name="judge<%= i %>" type="radio" value="<%= choice%>"/><%= topic.options[choice] %>
+            <% var isChecked = choice === topic.value ? 'Checked' : '' %>
+                <input name="judge<%= i %>" type="radio" value="<%= choice%>" <%= isChecked %>/><%= topic.options[choice] %>
             <% }%>
         </li>
         <% }); %>

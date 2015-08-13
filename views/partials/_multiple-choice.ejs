@@ -7,7 +7,8 @@
 
         <% for(var choice in topic.options) { %>
         <li>
-            <input name="multiple_choice<%= i %>" type="checkbox" value="<%= choice%>"/>
+            <% var isChecked = (topic.value.indexOf(choice) !== -1) ? 'Checked' : '' %>
+            <input name="multiple_choice<%= i %>" type="checkbox" value="<%= choice%>" <%= isChecked %>/>
             <label>（<%= choice %>）<%= topic.options[choice] %></label>
 
         </li>

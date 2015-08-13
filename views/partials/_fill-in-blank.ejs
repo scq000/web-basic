@@ -6,7 +6,7 @@
             <label><%= topic.question %></label>
 
             <% for(var k = 0; k < topic.options.length; k++) { %>
-            <input name="fill_in_blank<%= i %>" type="text"/>
+            <input name="fill_in_blank<%= i %>" type="text" value="<%=  topic.value[k] %>"/>
             <% } %>
 
         </li>

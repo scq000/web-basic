@@ -26,6 +26,7 @@ HomeController.prototype.controlUserInput = function(req,res) {
     var homeViewModel = new HomeViewModel(topics,req.body);
 
     res.render('index',homeViewModel);
+    //res.send(homeViewModel.getStudentInfo());
 };
 
 module.exports = HomeController;

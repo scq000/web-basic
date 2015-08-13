@@ -26,5 +26,16 @@ FormHelper.prototype.getTotalScore = function(topics){
     return totalScore;
 };
 
+FormHelper.prototype.getStudentInfo = function () {
+    if(!this.formData) {
+        return {'grade': '', 'studentId': '', 'studentName': ''};
+    }
+    return {
+        'grade': this.formData.grade,
+        'studentId': this.formData.studentId,
+        'studentName': this.formData.studentName
+    };
+};
+
 module.exports = FormHelper;
 

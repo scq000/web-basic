@@ -5,7 +5,7 @@
         <% topics.forEach(function(topic,i) { %>
         <li>
             <label><%= i+1 %>.<%= topic.question %></label><br/>
-            <textarea name="simple_answer<%= i %>" cols="30" rows="10"></textarea>
+            <textarea name="simple_answer<%= i %>" cols="30" rows="10"><%= topic.value %></textarea>
         </li>
         <% }); %>
 
