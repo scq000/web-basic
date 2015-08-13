@@ -1,181 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>统一建模语言理论测试</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<head>
+  <title>统一建模语言理论测试</title>
+</head>
+<body>
 
-  <h1>统一建模语言理论测试</h1>
+<h1>统一建模语言理论测试</h1>
 
   <form action="/" method="post" class="userInput" autocomplete="off">
 
-    <header>
-      <table>
-        <tr>
-          <td>
-            <label>考试科目：</label>
-            <strong> 统一建模语言 UML </strong>
-          </td>
-          <td>
-            <label>时间： </label>
-            <label>100 分钟 </label>
-          </td>
-          <td>
-            <label>得分： </label>
-            <label id="totalScore"></label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="grade">班 级：</label>
-            <input name="grade" type="text" id="grade"/>
-          </td>
-          <td>
-            <label for="studentId">学号：</label>
-            <input name="studentId" type="text" id="studentId"/>
-          </td>
-          <td>
-            <label for="studentName">姓名：</label>
-            <input name="studentName" type="text" id="studentName"/>
-          </td>
-        </tr>
-      </table>
-    </header>
+    <%- include('partials/_header.ejs') %>
 
-    <section>
-      <h3>一、填空题</h3>
-      <ol>
-        <li>
-          <label>UML 的中文全称是：</label>
-          <input name="fill_in_blank0" type="text"/>
-        </li>
-        <li>
-          <label>对象最突出的特征是：</label>
-          <input name="fill_in_blank1" type="text"/>
-          <input name="fill_in_blank1" type="text"/>
-          <input name="fill_in_blank1" type="text"/>
-        </li>
-      </ol>
-    </section>
+    <%- include('partials/_fill-in-blank.ejs') %>
 
+    <%- include('partials/_single-choice.ejs') %>
 
-    <section>
-      <h3>二、选择题</h3>
-      <ul>
-        <label>1.UML与软件工程的关系是：</label>
-        <li>
-          <input name="single_choice0" type="radio" value="A"/>
-          <label>（A）UML 就是软件工程</label>
-        </li>
-        <li>
-          <input name="single_choice0" type="radio" value="B"/>
-          <label>（B）UML 参与到软件工程中软件开发过程的几个阶段</label>
-        </li>
-        <li>
-          <input name="single_choice0" type="radio" value="C"/>
-          <label>（C）UML 与软件工程无关</label>
-        </li>
-        <li>
-          <input name="single_choice0" type="radio" value="D"/>
-          <label>（D）UML 是软件工程的一部分</label>
-        </li>
-      </ul>
+    <%- include('partials/_multiple-choice.ejs') %>
 
-      <ul>
-        <label>2.Java语言支持：</label>
-        <li>
-          <input name="single_choice1" type="radio" value="A"/>
-          <label>（A）单继承</label>
-        </li>
-        <li>
-          <input name="single_choice1" type="radio" value="B"/>
-          <label>（B）多继承</label>
-        </li>
-        <li>
-          <input name="single_choice1" type="radio" value="C"/>
-          <label>（C）单继承和多继承都支持</label>
-        </li>
-        <li>
-          <input name="single_choice1" type="radio" value="D"/>
-          <label>（D）单继承和多继承都不支持</label>
-        </li>
-      </ul>
+    <%- include('partials/_judge.ejs') %>
 
-    </section>
+    <%- include('partials/_simple-answer.ejs') %>
 
-
-    <section>
-      <h3>三、多选题</h3>
-      <ul>
-        <label>1.用例的粒度分为以下哪三种。</label>
-        <li>
-          <input name="multiple_choice0" type="checkbox" value="A"/>
-          <label>（A）概述级</label>
-        </li>
-        <li>
-          <input name="multiple_choice0" type="checkbox" value="B"/>
-          <label>（B）需求级</label>
-        </li>
-        <li>
-          <input name="multiple_choice0" type="checkbox" value="C"/>
-          <label>（C）用户目标级</label>
-        </li>
-        <li>
-          <input name="multiple_choice0" type="checkbox" value="D"/>
-          <label>（D）子功能级</label>
-        </li>
-      </ul>
-
-      <ul>
-        <label>2.类图由以下哪三部分组成</label>
-        <li>
-          <input name="multiple_choice1" type="checkbox" value="A"/>
-          <label>（A）名称(Name)</label>
-        </li>
-        <li>
-          <input name="multiple_choice1" type="checkbox" value="B"/>
-          <label>（B）属性(Attribute)</label>
-        </li>
-        <li>
-          <input name="multiple_choice1" type="checkbox" value="C"/>
-          <label>（C）操作(Operation)</label>
-        </li>
-        <li>
-          <input name="multiple_choice1" type="checkbox" value="D"/>
-          <label>（D）方法（Function）</label>
-        </li>
-      </ul>
-
-    </section>
-
-    <section>
-      <h3>四、判断题</h3>
-      <ul>
-        <li>
-          <label>1.用例图只是用于和客户交流和沟通的，用于确定需求。</label>
-          <input name="judge0" type="radio" value="yes"/>对
-          <input name="judge0" type="radio" value="no" />错
-        </li>
-
-        <li>
-          <label>2.在状态图中,终止状态在一个状态图中允许有任意多个。</label>
-          <input name="judge1" type="radio" value="yes"/>对
-          <input name="judge1" type="radio" value="no"/>错
-        </li>
-
-      </ul>
-    </section>
-
-    <section>
-      <h3>五、简 答 题</h3>
-      <ul>
-        <li>
-          <label>1. 简述什么是模型以及模型的表现形式?</label><br/>
-          <textarea name="simple_answer0" cols="30" rows="10"></textarea>
-        </li>
-      </ul>
-    </section>
 
     <button type="submit" />提交
 
