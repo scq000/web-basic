@@ -12,4 +12,8 @@ function Topic(type,name,question,options,score,answer){
 
 Topic.prototype.mark = function(){};
 
+Topic.prototype.setValue = function(value){
+  this.value = value;
+};
+
 module.exports = Topic;
