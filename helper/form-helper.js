@@ -3,7 +3,7 @@
 var _ = require('lodash');
 
 function FormHelper(formData){
-  this.formData = formData;
+    this.formData = formData;
 };
 
 FormHelper.prototype.setUserInputs = function(topics){
@@ -16,7 +16,18 @@ FormHelper.prototype.setUserInputs = function(topics){
     }
 };
 
+FormHelper.prototype.isDateEmpty = function(){
+    for(var name in this.formData) {
+      return false;
+    }
+
+    return true;
+};
+
 FormHelper.prototype.getTotalScore = function(topics){
+    if(this.isDateEmpty()) {
+        return '';
+    }
     var totalScore = 0;
 
     topics.forEach(function(topic) {
@@ -27,9 +38,6 @@ FormHelper.prototype.getTotalScore = function(topics){
 };
 
 FormHelper.prototype.getStudentInfo = function () {
-    if(!this.formData) {
-        return {'grade': '', 'studentId': '', 'studentName': ''};
-    }
     return {
         'grade': this.formData.grade,
         'studentId': this.formData.studentId,
