@@ -27,6 +27,7 @@ HomeController.prototype.submit = function (req, res) {
 
     formHelper.setUserInputs();
     homeViewModel.totalScore = formHelper.getTotalScore();
+    homeViewModel.studentInfo = formHelper.getStudentInfo();
 
     res.render('index', homeViewModel);
 };

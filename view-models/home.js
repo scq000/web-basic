@@ -12,6 +12,7 @@ function HomeViewModel(topics, formData) {
     this.topics = topics;
     this.formData = formData;
     this.totalScore = '';
+    this.studentInfo = {grade:'', studentName:'', studentId:''};
 }
 
 HomeViewModel.prototype.getFillInBlankTopic = function () {
@@ -42,14 +43,6 @@ HomeViewModel.prototype.getShortAnswerTopic = function () {
     return this.topics.filter(function (topic) {
         return topic instanceof ShortAnswerTopic;
     });
-};
-
-HomeViewModel.prototype.getStudentInfo = function () {
-    if (!this.formData) {
-       return {grade:'', studentName:'', studentId:''};
-    }
-    var formHelper = new FormHelper(this.formData);
-    return formHelper.getStudentInfo();
 };
 
 module.exports = HomeViewModel;
