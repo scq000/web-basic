@@ -9,7 +9,7 @@
       ],
       "score": 5,
       "answer": ["统一建模语言"],
-      "value": ""
+      "value": [""]
     },
     {
       "type": "fill_in_blank",
@@ -26,7 +26,7 @@
         "继承性",
         "多态性"
       ],
-      "value": ""
+      "value": [""]
     }
   ],
   "single_choice": [
@@ -41,8 +41,8 @@
         "D": "UML 是软件工程的一部分"
       },
       "score": 10,
-      "answer": "A",
-      "value": ""
+      "answer": ["A"],
+      "value": [""]
     },
     {
       "type": "single_choice",
@@ -55,8 +55,8 @@
         "D": "单继承和多继承都不支持"
       },
       "score": 10,
-      "answer": "C",
-      "value": ""
+      "answer": ["C"],
+      "value": [""]
     }
   ],
   "multiple_choice": [
@@ -76,7 +76,7 @@
         "B",
         "D"
       ],
-      "value": ""
+      "value": [""]
     },
     {
       "type": "multiple_choice",
@@ -94,7 +94,7 @@
         "B",
         "C"
       ],
-      "value": ""
+      "value": [""]
     }
   ],
   "judge": [
@@ -119,8 +119,8 @@
         "no" : "错"
       },
       "score": 10,
-      "answer": "yes",
-      "value": ""
+      "answer": ["yes"],
+      "value": [""]
     }
   ],
   "simple_answer": [
@@ -130,8 +130,8 @@
       "question": "简述什么是模型以及模型的表现形式?",
       "options": "",
       "score": 20,
-      "answer": "no",
-      "value": "模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。"
+      "answer": ["no"],
+      "value": ["模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。"]
     }
   ]
 }

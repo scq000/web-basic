@@ -10,7 +10,7 @@ SingleChoiceTopic.prototype = Object.create(Topic.prototype);
 SingleChoiceTopic.prototype.constructor = SingleChoiceTopic;
 
 SingleChoiceTopic.prototype.mark = function () {
-    return this.value === this.answer ? this.score : 0;
+    return this.value.toString() === this.answer.toString() ? this.score : 0;
 };
 
 module.exports = SingleChoiceTopic;

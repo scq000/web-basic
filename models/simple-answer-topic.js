@@ -10,7 +10,7 @@ SimpleAnswerTopic.prototype = Object.create(Topic.prototype);
 SimpleAnswerTopic.prototype.constructor = SimpleAnswerTopic;
 
 SimpleAnswerTopic.prototype.mark = function () {
-    return this.value === this.answer ? this.score : 0;
+    return this.value.toString() === this.answer.toString() ? this.score : 0;
 };
 
 module.exports = SimpleAnswerTopic;

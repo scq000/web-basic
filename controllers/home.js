@@ -14,6 +14,7 @@ HomeController.prototype.index = function (req, res) {
 
     var homeViewModel = new HomeViewModel(topics, req.body);
 
+
     res.render('index', homeViewModel);
 };
 module.exports = HomeController;

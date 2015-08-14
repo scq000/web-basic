@@ -12,7 +12,7 @@
         <% for(var choice in topic.options) { %>
         <li class="list-group-item">
 
-            <% var isChecked = choice === topic.value ? 'Checked' : '' %>
+            <% var isChecked = choice === topic.value.toString() ? 'Checked' : '' %>
             <input name="single_choice<%= i %>" type="radio" value="<%= choice %>" <%= isChecked %>/>
             <label>（<%= choice %>）<%= topic.options[choice] %></label>
 
