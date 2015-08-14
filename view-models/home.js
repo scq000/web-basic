@@ -1,6 +1,7 @@
 'use strict';
 
 var FormHelper = require('../helpers/form');
+var TOPIC_TYPE = require('../lib/utils');
 
 function HomeViewModel(topics, formData) {
     this.topics = topics;
@@ -9,31 +10,31 @@ function HomeViewModel(topics, formData) {
 
 HomeViewModel.prototype.getFillInBlankTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'fill_in_blank';
+        return topic.type === TOPIC_TYPE.FILL_IN_BLANK;
     });
 };
 
 HomeViewModel.prototype.getSingleChoiceTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'single_choice';
+        return topic.type === TOPIC_TYPE.SINGLE_CHOICE;
     });
 };
 
 HomeViewModel.prototype.getMultipleChoiceTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'multiple_choice';
+        return topic.type === TOPIC_TYPE.MULTIPLE_CHOICE;
     });
 };
 
 HomeViewModel.prototype.getTrueFalseTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'true_false';
+        return topic.type === TOPIC_TYPE.TRUE_FALSE;
     });
 };
 
 HomeViewModel.prototype.getShortAnswerTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'short_answer';
+        return topic.type === TOPIC_TYPE.SHORT_ANSWER;
     });
 };
 
