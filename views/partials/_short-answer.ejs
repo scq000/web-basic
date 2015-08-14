@@ -10,7 +10,7 @@
             <% topics.forEach(function(topic, i) { %>
             <li class="list-group-item">
                 <label><%= i + 1 %>.<%= topic.question %></label><br/>
-                <textarea class="form-control" name="simple_answer<%= i %>" cols="50"
+                <textarea class="form-control" name="short_answer<%= i %>" cols="50"
                           rows="10"><%= topic.value %></textarea>
             </li>
             <% }); %>

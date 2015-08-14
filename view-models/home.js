@@ -25,15 +25,15 @@ HomeViewModel.prototype.getMultipleChoiceTopic = function () {
     });
 };
 
-HomeViewModel.prototype.getJudgeTopic = function () {
+HomeViewModel.prototype.getTrueFalseTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'judge';
+        return topic.type === 'true_false';
     });
 };
 
-HomeViewModel.prototype.getSimpleAnswerTopic = function () {
+HomeViewModel.prototype.getShortAnswerTopic = function () {
     return this.topics.filter(function (topic) {
-        return topic.type === 'simple_answer';
+        return topic.type === 'short_answer';
     });
 };
 
@@ -51,6 +51,7 @@ HomeViewModel.prototype.getTotalScore = function () {
         return '';
     }
     var formHelper = new FormHelper(this.formData);
+
     formHelper.setUserInputs(this.topics);
     return formHelper.getTotalScore(this.topics);
 };

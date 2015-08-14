@@ -97,10 +97,10 @@
       "value": [""]
     }
   ],
-  "judge": [
+  "true_false": [
     {
-      "type": "judge",
-      "name": "judge0",
+      "type": "true_false",
+      "name": "true_false0",
       "question": "用例图只是用于和客户交流和沟通的，用于确定需求。",
       "options": {
         "yes": "对",
@@ -111,8 +111,8 @@
       "value": ""
     },
     {
-      "type": "judge",
-      "name": "judge1",
+      "type": "true_false",
+      "name": "true_false1",
       "question": "在状态图中,终止状态在一个状态图中允许有任意多个。",
       "options": {
         "yes": "对",
@@ -123,10 +123,10 @@
       "value": [""]
     }
   ],
-  "simple_answer": [
+  "short_answer": [
     {
-      "type": "simple_answer",
-      "name": "simple_answer0",
+      "type": "short_answer",
+      "name": "short_answer0",
       "question": "简述什么是模型以及模型的表现形式?",
       "options": "",
       "score": 20,
