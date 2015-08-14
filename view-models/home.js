@@ -11,6 +11,7 @@ var ShortAnswerTopic = require('../models/short-answer-topic');
 function HomeViewModel(topics, formData) {
     this.topics = topics;
     this.formData = formData;
+    this.totalScore = '';
 }
 
 HomeViewModel.prototype.getFillInBlankTopic = function () {
@@ -43,23 +44,12 @@ HomeViewModel.prototype.getShortAnswerTopic = function () {
     });
 };
 
-
 HomeViewModel.prototype.getStudentInfo = function () {
     if (!this.formData) {
        return {grade:'', studentName:'', studentId:''};
     }
     var formHelper = new FormHelper(this.formData);
     return formHelper.getStudentInfo();
-};
-
-HomeViewModel.prototype.getTotalScore = function () {
-    if (!this.formData) {
-        return '';
-    }
-    var formHelper = new FormHelper(this.formData);
-
-    formHelper.setUserInputs(this.topics);
-    return formHelper.getTotalScore(this.topics);
 };
 
 module.exports = HomeViewModel;
