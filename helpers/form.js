@@ -16,18 +16,7 @@ FormHelper.prototype.setUserInputs = function (topics) {
     }
 };
 
-FormHelper.prototype.isDateEmpty = function () {
-    for (var name in this.formData) {
-        return false;
-    }
-
-    return true;
-};
-
 FormHelper.prototype.getTotalScore = function (topics) {
-    if (this.isDateEmpty()) {
-        return '';
-    }
     var totalScore = 0;
 
     topics.forEach(function (topic) {

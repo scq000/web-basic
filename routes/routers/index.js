@@ -9,6 +9,6 @@ var homeController = new HomeController();
 
 router.get('/', homeController.index);
 
-router.post('/',homeController.index);
+router.post('/',homeController.submit);
 
 module.exports = router;

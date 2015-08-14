@@ -39,6 +39,9 @@ HomeViewModel.prototype.getSimpleAnswerTopic = function () {
 
 
 HomeViewModel.prototype.getStudentInfo = function () {
+    if (!this.formData) {
+       return {grade:'', studentName:'', studentId:''};
+    }
     var formHelper = new FormHelper(this.formData);
     return formHelper.getStudentInfo();
 };
