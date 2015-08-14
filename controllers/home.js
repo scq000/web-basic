@@ -1,7 +1,7 @@
 'use strict';
 
 var TopicHelper = require('../helpers/topic');
-var FormHelper = require('../helpers/form');
+var HomeViewModelHelper = require('../helpers/home-view-model');
 var HomeViewModel = require('../view-models/home');
 var data = require('../seeds/topics.json');
 
@@ -23,11 +23,11 @@ HomeController.prototype.submit = function (req, res) {
     var topics = topicHelper.getTopics(data);
 
     var homeViewModel = new HomeViewModel(topics, req.body);
-    var formHelper = new FormHelper(req.body,topics);
+    var homeViewModelHelper = new HomeViewModelHelper(req.body,topics);
 
-    formHelper.setUserInputs();
-    homeViewModel.totalScore = formHelper.getTotalScore();
-    homeViewModel.studentInfo = formHelper.getStudentInfo();
+    homeViewModelHelper.setUserInputs();
+    homeViewModel.totalScore = homeViewModelHelper.getTotalScore();
+    homeViewModel.studentInfo = homeViewModelHelper.getStudentInfo();
 
     res.render('index', homeViewModel);
 };

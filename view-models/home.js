@@ -1,6 +1,6 @@
 'use strict';
 
-var FormHelper = require('../helpers/form');
+var FormHelper = require('../helpers/home-view-model');
 
 var FillInBlankTopic = require('../models/fill-in-blank-topic');
 var SingleChoiceTopic = require('../models/single-choice-topic');

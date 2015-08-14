@@ -2,12 +2,12 @@
 
 var _ = require('lodash');
 
-function FormHelper(formData,topics) {
+function HomeViewModelHelper(formData,topics) {
     this.formData = formData;
     this.topics = topics;
 };
 
-FormHelper.prototype.setUserInputs = function () {
+HomeViewModelHelper.prototype.setUserInputs = function () {
     for (var name in this.formData) {
         if (name === 'grade' || name === 'studentId' || name === 'studentName') {
             continue;
@@ -17,7 +17,7 @@ FormHelper.prototype.setUserInputs = function () {
     }
 };
 
-FormHelper.prototype.getTotalScore = function () {
+HomeViewModelHelper.prototype.getTotalScore = function () {
     var totalScore = 0;
 
     this.topics.forEach(function (topic) {
@@ -27,7 +27,7 @@ FormHelper.prototype.getTotalScore = function () {
     return totalScore;
 };
 
-FormHelper.prototype.getStudentInfo = function () {
+HomeViewModelHelper.prototype.getStudentInfo = function () {
     return {
         'grade': this.formData.grade,
         'studentId': this.formData.studentId,
@@ -35,5 +35,5 @@ FormHelper.prototype.getStudentInfo = function () {
     };
 };
 
-module.exports = FormHelper;
+module.exports = HomeViewModelHelper;
 
