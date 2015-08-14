@@ -1,6 +1,6 @@
 'use strict';
 
-var FormHelper = require('../helper/form-helper');
+var FormHelper = require('../helpers/form');
 
 function HomeViewModel(topics, formData) {
     this.topics = topics;

@@ -1,7 +1,7 @@
 'use strict';
 
-var TopicHelper = require('../helper/topic-helper');
-var HomeViewModel = require('../view-models/home-view-model');
+var TopicHelper = require('../helpers/topic');
+var HomeViewModel = require('../view-models/home');
 
 function HomeController() {
 }
