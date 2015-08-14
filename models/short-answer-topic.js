@@ -3,7 +3,7 @@
 var Topic = require('./topic');
 
 function ShortAnswerTopic(name, question, options, score, answer) {
-    Topic.call(this, "short_answer", name, question, options, score, answer);
+    Topic.call(this, name, question, options, score, answer);
 }
 
 ShortAnswerTopic.prototype = Object.create(Topic.prototype);

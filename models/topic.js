@@ -2,8 +2,7 @@
 
 var _ = require('lodash');
 
-function Topic(type, name, question, options, score, answer) {
-    this.type = type;
+function Topic(name, question, options, score, answer) {
     this.name = name;
     this.question = question;
     this.options = options;
