@@ -11,7 +11,7 @@ FormHelper.prototype.setUserInputs = function (topics) {
         if (name === 'grade' || name === 'studentId' || name === 'studentName') {
             continue;
         }
-        console.log(this.formData);
+
         _.find(topics, {'name': name}).setValue(this.formData[name]);
     }
 };
