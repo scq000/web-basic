@@ -13,17 +13,26 @@ function TopicFactory() {
 }
 
 TopicFactory.prototype.create = function (type, data) {
+    var topic;
+
     if (type === TOPIC_TYPE.FILL_IN_BLANK) {
-        return new FillInBlankTopic(data.name, data.question, data.options, data.score, data.answer);
+        topic = new FillInBlankTopic(data.name, data.question, data.score, data.answer);
+        topic.setOptions(data.options);
     } else if (type === TOPIC_TYPE.SINGLE_CHOICE) {
-        return new SingleChoiceTopic(data.name, data.question, data.options, data.score, data.answer);
+        topic = new SingleChoiceTopic(data.name, data.question, data.score, data.answer);
+        topic.setOptions(data.options);
     } else if (type === TOPIC_TYPE.MULTIPLE_CHOICE) {
-        return new MultipleChoiceTopic(data.name, data.question, data.options, data.score, data.answer);
+        topic = new MultipleChoiceTopic(data.name, data.question, data.score, data.answer);
+        topic.setOptions(data.options);
     } else if (type === TOPIC_TYPE.TRUE_FALSE) {
-        return new TrueFalseTopic(data.name, data.question, data.options, data.score, data.answer);
+        topic = new TrueFalseTopic(data.name, data.question, data.score, data.answer);
+        topic.setOptions(data.options);
     } else if (type === TOPIC_TYPE.SHORT_ANSWER) {
-        return new ShortAnswerTopic(data.name, data.question, data.options, data.score, data.answer);
+        topic = new ShortAnswerTopic(data.name, data.question, data.score, data.answer);
+        topic.setOptions(data.options);
     }
+    
+    return topic;
 };
 
 module.exports = TopicFactory;

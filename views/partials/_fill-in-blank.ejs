@@ -7,12 +7,12 @@
     <ol class="list-group">
         <% topics.forEach(function(topic, i) { %>
         <li class="list-group-item form-inline">
-            <label><%= i + 1 %>.<%= topic.question %></label>
+            <label><%= topic.question %></label>
 
             <div class="form-group">
-                <% for(var k = 0; k < topic.options.length; k++) { %>
+                <% topic.options.forEach(function(option, k) { %>
                 <input class="form-control" name="fill_in_blank<%= i %>" type="text" value="<%= topic.value[k] %>"/>
-                <% } %>
+                <% }); %>
             </div>
 
         </li>

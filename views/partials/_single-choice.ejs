@@ -9,15 +9,13 @@
 
         <label><%= i + 1 %>.<%= topic.question %></label>
 
-        <% for(var choice in topic.options) { %>
+        <% topic.options.forEach(function(option) { %>
         <li class="list-group-item">
-
-            <% var isChecked = choice === topic.value.toString() ? 'Checked' : '' %>
-            <input name="single_choice<%= i %>" type="radio" value="<%= choice %>" <%= isChecked %>/>
-            <label>（<%= choice %>）<%= topic.options[choice] %></label>
-
+            <% var isChecked = (topic.value.toString() === option.value ) ? 'Checked' : '' %>
+            <input name="single_choice<%= i %>" type="radio" value="<%= option.value %>" <%= isChecked %>/>
+            <label>（<%= option.value %>）<%= option.description %></label>
         </li>
-        <% } %>
+        <% }); %>
 
     </ul>
     <% }); %>

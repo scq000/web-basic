@@ -2,8 +2,8 @@
 
 var Topic = require('./topic');
 
-function TrueFalseTopic(name, question, options, score, answer) {
-    Topic.call(this, name, question, options, score, answer);
+function TrueFalseTopic(name, question, score, answer) {
+    Topic.call(this, name, question, score, answer);
 }
 
 TrueFalseTopic.prototype = Object.create(Topic.prototype);

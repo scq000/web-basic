@@ -2,8 +2,8 @@
 
 var Topic = require('./topic');
 
-function SingleChoiceTopic(name, question, options, score, answer) {
-    Topic.call(this, name, question, options, score, answer);
+function SingleChoiceTopic(name, question, score, answer) {
+    Topic.call(this, name, question, score, answer);
 }
 
 SingleChoiceTopic.prototype = Object.create(Topic.prototype);

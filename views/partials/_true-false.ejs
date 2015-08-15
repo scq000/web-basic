@@ -12,11 +12,13 @@
                 <label><%= i + 1 %>.<%= topic.question %></label>
 
                 <div class="form-group">
-                    <% for(var choice in topic.options ) { %>
-                    <% var isChecked = choice === topic.value.toString() ? 'Checked' : '' %>
+                    <% topic.options.forEach(function(option) { %>
+                    <% var isChecked = option.value === topic.value.toString() ? 'Checked' : '' %>
                     <input name="true_false<%= i %>" type="radio"
-                           value="<%= choice %>" <%= isChecked %>/><%= topic.options[choice] %>
-                    <% } %>
+                           value="<%= option.value %>" <%= isChecked %>/><%= option.description %>
+
+                    <% }); %>
+
                 </div>
 
             </li>

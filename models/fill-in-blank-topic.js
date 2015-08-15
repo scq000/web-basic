@@ -3,8 +3,8 @@
 var Topic = require('./topic');
 var _ = require('lodash');
 
-function FillInBlankTopic(name, question, options, score, answer) {
-    Topic.call(this, name, question, options, score, answer);
+function FillInBlankTopic(name, question, score, answer) {
+    Topic.call(this, name, question, score, answer);
 }
 
 FillInBlankTopic.prototype = Object.create(Topic.prototype);
