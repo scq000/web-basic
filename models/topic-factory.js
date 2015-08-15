@@ -31,7 +31,7 @@ TopicFactory.prototype.create = function (type, data) {
         topic = new ShortAnswerTopic(data.name, data.question, data.score, data.answer);
         topic.setOptions(data.options);
     }
-    
+
     return topic;
 };
 

@@ -3,21 +3,37 @@
         <h3 class="panel-title">二、选择题</h3>
     </div>
 
-    <% topics.forEach(function(topic, i){ %>
+    <div class="panel-body row">
 
-    <ul class="panel-body">
+        <ol>
 
-        <label><%= i + 1 %>.<%= topic.question %></label>
+            <% topics.forEach(function(topic, i){ %>
 
-        <% topic.options.forEach(function(option) { %>
-        <li class="list-group-item">
-            <% var isChecked = (topic.value.toString() === option.value ) ? 'Checked' : '' %>
-            <input name="single_choice<%= i %>" type="radio" value="<%= option.value %>" <%= isChecked %>/>
-            <label>（<%= option.value %>）<%= option.description %></label>
-        </li>
-        <% }); %>
+            <li>
+                <div class="form-group">
 
-    </ul>
-    <% }); %>
+                    <label class="control-label"><%= topic.question %></label>
+
+                    <% topic.options.forEach(function(option) { %>
+
+                    <div class="form-horizontal">
+
+                        <% var isChecked = (topic.value.toString() === option.value ) ? 'Checked' : '' %>
+                        <input name="single_choice<%= i %>" type="radio" value="<%= option.value %>" <%= isChecked %>/>
+                        <label>（<%= option.value %>）<%= option.description %></label>
+
+                        <% }); %>
+
+                    </div>
+
+                </div>
+
+            </li>
+
+            <% }); %>
+
+        </ol>
+
+    </div>
 
 </section>

@@ -4,20 +4,30 @@
         <h3 class="panel-title">一、填空题</h3>
     </div>
 
-    <ol class="list-group">
-        <% topics.forEach(function(topic, i) { %>
-        <li class="list-group-item form-inline">
-            <label><%= topic.question %></label>
+    <div class="panel-body row">
 
-            <div class="form-group">
-                <% topic.options.forEach(function(option, k) { %>
-                <input class="form-control" name="fill_in_blank<%= i %>" type="text" value="<%= topic.value[k] %>"/>
-                <% }); %>
-            </div>
+        <ol>
+            <% topics.forEach(function(topic, i) { %>
+            <li>
 
-        </li>
-        <% }); %>
+                <div class="form-group">
 
-    </ol>
+                    <label class="control-label"><%= topic.question %></label>
+
+                    <div class="form-inline">
+                        <% topic.options.forEach(function(option, k) { %>
+                        <input class="form-control" name="fill_in_blank<%= i %>" type="text" value="<%= topic.value[k] %>"/>
+                        <% }); %>
+                    </div>
+
+                </div>
+
+            </li>
+            <% }); %>
+
+        </ol>
+
+    </div>
+
 
 </section>

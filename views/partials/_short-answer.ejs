@@ -3,19 +3,25 @@
         <h3 class="panel-title">五、简 答 题</h3>
     </div>
 
-    <div class="panel-body">
+    <div class="panel-body row">
 
-        <ul class="list-group">
+        <ol>
 
             <% topics.forEach(function(topic, i) { %>
-            <li class="list-group-item">
-                <label><%= i + 1 %>.<%= topic.question %></label><br/>
-                <textarea class="form-control" name="short_answer<%= i %>" cols="50"
-                          rows="10"><%= topic.value %></textarea>
+            <li>
+                <div class="form-group">
+
+                    <label class="control-label"><%= topic.question %></label>
+
+                    <textarea class="form-control" name="short_answer<%= i %>" cols="50"
+                              rows="10"><%= topic.value %></textarea>
+
+                </div>
+
             </li>
             <% }); %>
 
-        </ul>
+        </ol>
 
     </div>
 </section>

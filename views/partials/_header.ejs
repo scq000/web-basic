@@ -1,38 +1,41 @@
 <header>
-    <table class="table table-hover">
+    <div class="panel panel-default">
 
-        <tr>
-            <td>
-                <label>考试科目：</label>
-                <strong> 统一建模语言 UML </strong>
-            </td>
-            <td>
-                <label>时间： </label>
-                <label>100 分钟 </label>
-            </td>
-            <td>
-                <label>得分： </label>
-                <label class="label label-danger" id="totalScore"><%= totalScore %></label>
-            </td>
-        </tr>
+        <div class="panel-body">
 
-        <tr>
-            <td class="form-group form-inline">
-                <label for="grade">班 级：</label>
-                <input class="form-control student_info" name="grade" type="text" id="grade"
-                       value="<%= studentInfo.grade %>"/>
-            </td>
-            <td class="form-group form-inline">
-                <label for="studentId">学号：</label>
-                <input class="form-control student_info" name="studentId" type="text" id="studentId"
-                       value="<%= studentInfo.studentId %>"/>
-            </td>
-            <td class="form-group form-inline">
-                <label for="studentName">姓名：</label>
-                <input class="form-control student_info" name="studentName" type="text" id="studentName"
-                       value="<%= studentInfo.studentName %>"/>
-            </td>
-        </tr>
+            <div class="row">
+                <div  class="col-md-4">
+                    <label class="control-label">考试科目：</label>
+                    <strong> 统一建模语言 UML </strong>
+                </div>
+                <div  class="col-md-4">
+                    <label class="control-label">时间： </label>
+                    <label>100 分钟 </label>
+                </div>
+                <div  class="col-md-4">
+                    <label class="control-label">得分： </label>
+                    <label class="text-danger" id="totalScore"><%= totalScore %></label>
+                </div>
+            </div>
 
-    </table>
+            <div class="row">
+                <div class="col-md-4 form-group form-inline">
+                    <label class="control-label" for="grade">班 级：</label>
+                    <input class="form-control student_info" name="grade" type="text" id="grade"
+                           value="<%= studentInfo.grade %>"/>
+                </div>
+                <div class="col-md-4 form-group form-inline">
+                    <label class="control-label" for="studentId">学号：</label>
+                    <input class="form-control student_info" name="studentId" type="text" id="studentId"
+                           value="<%= studentInfo.studentId %>"/>
+                </div>
+                <div class="col-md-4 form-group form-inline">
+                    <label class="control-label" for="studentName">姓名：</label>
+                    <input class="form-control student_info" name="studentName" type="text" id="studentName"
+                           value="<%= studentInfo.studentName %>"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </header>

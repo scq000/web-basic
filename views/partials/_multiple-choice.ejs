@@ -3,20 +3,30 @@
         <h3 class="panel-title">三、多选题</h3>
     </div>
 
-    <div class="panel-body">
-        <% topics.forEach(function(topic, i){ %>
-        <ul class="list-group">
-            <label><%= i + 1 %>.<%= topic.question %></label>
+    <div class="panel-body row">
 
-            <% topic.options.forEach(function(option) { %>
-            <li class="list-group-item">
-                <% var isChecked = (topic.value.indexOf(option.value) !== -1) ? 'Checked' : '' %>
-                <input name="multiple_choice<%= i %>" type="checkbox" value="<%= option.value %>" <%= isChecked %>/>
-                <label>（<%= option.value %>）<%= option.description %></label>
+        <ol>
+
+            <% topics.forEach(function(topic, i){ %>
+
+            <li>
+
+                <div class="form-group">
+                    <label class="control-label"><%= topic.question %></label>
+
+                    <% topic.options.forEach(function(option) { %>
+                    <div class="form-horizontal">
+                        <% var isChecked = (topic.value.indexOf(option.value) !== -1) ? 'Checked' : '' %>
+                        <input name="multiple_choice<%= i %>" type="checkbox" value="<%= option.value %>" <%= isChecked %>/>
+                        <label>（<%= option.value %>）<%= option.description %></label>
+                    </div>
+                    <% }); %>
+                </div>
+
             </li>
+
             <% }); %>
 
-        </ul>
-        <% }); %>
+        </ol>
     </div>
 </section>
