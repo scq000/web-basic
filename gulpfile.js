@@ -2,23 +2,29 @@ var gulp = require('gulp');
 var execsql = require('execsql');
 var dbConfig = require('./config/database');
 var exec = require('gulp-exec');
+var nodemon = require('gulp-nodemon');
 
-gulp.task('init', function() {
+gulp.task('start', function() {
   var connection = execsql.config(dbConfig);
 
   connection.execFile('./seeds/topics.sql', function(err, results) {
     if (err) {
-      console.log(err);
+      throw err;
     }
-    console.log('数据库初始化成功!');
-    
+
     connection.end();
+
+    console.log('数据库初始化成功!');
+
+    nodemon({
+            script: 'app.js'
+           , ext: 'ejs js sql json'
+           , ignore: ['public/*']
+         })
+     .on('restart', function () {
+       console.log('restarted!')
+     });
+
   });
 
-});
-
-
-gulp.task('start', function() {
-  gulp.src('').pipe(exec('npm start'))
-  .pipe(exec.reporter({err:true,stderr:true,stdout:true}));
 });
