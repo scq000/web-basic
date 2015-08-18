@@ -15,8 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5",
-    "jquery": "~2.1.4",
-    "jumbotron": "*"
+    "jumbotron": "*",
+    "bootstrap": "~3.3.5"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
   }
 }

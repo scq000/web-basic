@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var execsql = require('execsql');
 var dbConfig = require('./config/database');
-var exec = require('gulp-exec');
 var nodemon = require('gulp-nodemon');
 
 gulp.task('start', function() {
