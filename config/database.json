@@ -1,5 +1,6 @@
 {
   "user": "root",
   "password": "a",
-  "host": "localhost"
+  "host": "localhost",
+  "database": "TWWebBasic"
 }
