@@ -10,7 +10,7 @@ MultipleChoiceTopic.prototype = Object.create(Topic.prototype);
 MultipleChoiceTopic.prototype.constructor = MultipleChoiceTopic;
 
 MultipleChoiceTopic.prototype.mark = function () {
-    return this.value.toString() === this.answer.toString() ? this.score : 0;
+    return this.value.join('') === this.answer ? this.score : 0;
 };
 
 module.exports = MultipleChoiceTopic;

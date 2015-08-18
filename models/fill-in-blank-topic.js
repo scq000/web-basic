@@ -11,7 +11,7 @@ FillInBlankTopic.prototype = Object.create(Topic.prototype);
 FillInBlankTopic.prototype.constructor = FillInBlankTopic;
 
 FillInBlankTopic.prototype.mark = function () {
-    return _.intersection(this.answer, this.value).length * this.score;
+    return _.intersection(this.answer.split(','), this.value).length * this.score;
 };
 
 module.exports = FillInBlankTopic;

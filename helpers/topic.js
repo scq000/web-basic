@@ -5,15 +5,14 @@ var TopicFactory = require('../models/topic-factory');
 function TopicHelper() {
 }
 
-TopicHelper.prototype.getTopics = function (data) {
+TopicHelper.prototype.getTopics = function (datas) {
     var topics = [];
 
     var topicFactory = new TopicFactory();
-    for (var type in data) {
-        data[type].forEach(function (topicData) {
-            topics.push(topicFactory.create(type, topicData));
-        });
-    }
+    
+    datas.forEach(function(data) {
+      topics.push(topicFactory.create(data.type,data));
+    });
 
     return topics;
 };
