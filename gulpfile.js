@@ -3,7 +3,8 @@ var execsql = require('execsql');
 var dbConfig = require('./config/database');
 var nodemon = require('gulp-nodemon');
 
-gulp.task('start', function() {
+
+gulp.task('init', function() {
   var connection = execsql.config(dbConfig);
 
   connection.execFile('./seeds/topics.sql', function(err, results) {
@@ -12,18 +13,19 @@ gulp.task('start', function() {
     }
 
     connection.end();
-
     console.log('数据库初始化成功!');
-
-    nodemon({
-            script: 'app.js'
-           , ext: 'ejs js sql json'
-           , ignore: ['public/*']
-         })
-     .on('restart', function () {
-       console.log('restarted!')
-     });
-
   });
+
+});
+
+gulp.task('start', function() {
+  nodemon({
+      script: 'app.js',
+      ext: 'ejs js sql json',
+      ignore: ['public/*']
+    })
+    .on('restart', function() {
+      console.log('restarted!');
+    });
 
 });
