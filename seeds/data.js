@@ -18,7 +18,7 @@ connection.query('SELECT * FROM topic;', function(err, rows) {
 connection.query('SELECT value,description,topic_name FROM alternative;', function(err, rows) {
   if (err) throw err;
 
-  var data = _.forEach(topicsData, function(topic) {
+  _.forEach(topicsData, function(topic) {
     topic.options = [];
 
     _.forEach(rows, function(option) {
